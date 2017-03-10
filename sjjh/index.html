@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge" />
+    <link rel="shortcut icon" href="example/favicon.ico" />
+    <title>jQuery EasyUI 1.5.x Of Insdep theme examples</title>
+
+    <link href="../themes/insdep/easyui.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/default_theme.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/iconfont/iconfont.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/main.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/portal.css" rel="stylesheet" type="text/css">
+
+    <style type="text/css">
+        .layout-panel-west {
+            border-right: 1px solid #c5c5c5;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="master-layout">
+        <div data-options="region:'north'" style="height:80px" class="header">
+            <div class="north-left" style="float: left">
+                <a href="" style="display: block;margin-top: 10px;">
+                    <img src="../img/logo1.png" alt="">
+                </a>
+            </div>
+            <div class="north-right" style="float: right;">
+                <div class="theme-user-info-panel1">
+                    <div class="left">
+                        <img src="../themes/insdep/images/portrait86x86.png" width="40" height="40">
+                    </div>
+                    <div class="center">
+                        <h1>匿名<span class="badge color-success">已认证</span></h1>
+                        <h2>管理员</h2>
+                    </div>
+                </div>
+                <div id="clock"></div>
+            </div>
+        </div>
+        <div data-options="region:'south'" style="height:50px;"></div>
+        <div data-options="region:'west',border:false" title="系统设置" style="width:200px;">
+            <div class="easyui-accordion" data-options="fit:true,border:false" id="accordion">
+                <div title="角色权限">
+                    <ul class="easyui-datalist" lines="true" style="width:100%;height:100%" data-options="border:false,">
+                        <li value="AL"><a url="group.html" class="arrow">角色管理</a></li>
+                        <li value="AL"><a url="menu.html" class="arrow">菜单管理</a></li>
+                        <li value="AL"><a url="authrule.html" class="arrow">权限管理</a></li>
+                    </ul>
+                </div>
+                <div title="机构设置">
+                    <ul class="easyui-datalist" lines="true" style="width:100%;height:100%" data-options="border:false,">
+                        <li value="AL"><a url="group.html" class="arrow">单位管理</a></li>
+                        <li value="AL"><a url="menu.html" class="arrow">业务处室</a></li>
+                    </ul>
+                </div>
+                <div title="参数设置">
+                    <ul class="easyui-datalist" lines="true" style="width:100%;height:100%" data-options="border:false,">
+                        <li value="AL"><a url="zidian.html" class="arrow">字典管理</a></li>
+                        <li value="AL"><a url="email.html" class="arrow">邮箱设置</a></li>
+                        <li value="AL"><a url="zidian.html" class="arrow">SMS 设置</a></li>
+                        <li value="AL"><a url="zidian.html" class="arrow">SSD 设置</a></li>
+                    </ul>
+                </div>
+                <div title="系统集成">
+                    <ul class="easyui-datalist" lines="true" style="width:100%;height:100%" data-options="border:false,">
+                        <li value="AL"><a url="shujujicheng.html" class="arrow">数据集成</a></li>
+                        <li value="AL"><a url="demo1.html" class="arrow">demo1</a></li>
+                        <li value="AL"><a url="wenjianguanli.html" class="arrow">文件管理</a></li>
+                        <li value="AL"><a url="zidian.html" class="arrow">SSD 设置</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div data-options="region:'center',border:false">
+            <div id="tt" class="easyui-tabs" data-options="tools:'#tab-tools',border:false" style="width:100%;height:100%;">
+                <div title="首页" style="display:none;" data-options="href:'home.html'">
+                </div>
+            </div>
+            <div id="tab-tools">
+                <a href="javascript:void(0)" class="easyui-linkbutton iconfont icon-w20" data-options="plain:true,iconCls:'icon-account-settings-variant'" onclick="addPanel()"></a>
+                <a href="javascript:void(0)" class="easyui-linkbutton iconfont icon-w20" data-options="plain:true,iconCls:'icon-settings'" onclick="removePanel()"></a>
+                <a href="javascript:void(0)" class="easyui-linkbutton iconfont icon-w20" data-options="plain:true,iconCls:'icon-email-outline'" onclick="removePanel()"></a>
+                <a href="javascript:void(0)" class="easyui-linkbutton iconfont icon-w20" data-options="plain:true,iconCls:'icon-logout'" onclick="removePanel()"></a>
+            </div>
+        </div>
+        <div id="contentCategoryMenu" class="easyui-menu" data-options="onClick:menuHandler">
+            <div data-options="name:'closeAll'">关闭所有标签</div>
+            <div data-options="name:'closeOther'">关闭其他标签</div>
+        </div>
+    </div>
+    <!--easyui相关-->
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../themes/insdep/jquery.insdep-extend.min.js"></script>
+    <!--easyui相关结束-->
+    <!--第三方插件加载-->
+    <script type="text/javascript" src="../js/plugins/echarts.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.portal.js"></script>
+    <!--第三方插件加载结束-->
+    <!--自定义js-->
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/lib.js"></script>
+    <!--自定义js结束-->
+    <script>
+        $(function() {
+            window.setInterval("realSysTime(clock)", 1000); //实时获取并显示系统时间 
+            /*布局部分*/
+            $('#master-layout').layout({
+                fit: true /*布局框架全屏*/
+            });
+
+            $('#accordion a').each(function() {
+                $(this).click(function() {
+                    var url = $(this).attr('url');
+                    var title = $(this).text();
+                    var tab = $('#tt');
+                    addTab(title, url, tab);
+                });
+            });
+
+            $('#tt').tabs({
+                onContextMenu: function(e, title, index) {
+                    var target = this;
+                    e.preventDefault();
+                    $(target).tabs('select', title);
+                    $('#contentCategoryMenu').menu('show', {
+                        left: e.pageX,
+                        top: e.pageY
+                    });
+
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>
