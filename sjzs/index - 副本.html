@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge" />
+    <link rel="shortcut icon" href="example/favicon.ico" />
+    <title>jQuery EasyUI 1.5.x Of Insdep theme examples</title>
+
+    <link href="../themes/insdep/easyui.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/default_theme.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/icon.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/iconfont/iconfont.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/main.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/portal.css" rel="stylesheet" type="text/css">
+    <link href="../css/sjzs.css" rel="stylesheet" type="text/css">
+
+    <style type="text/css">
+        .layout-panel-west {
+            border-right: 1px solid #c5c5c5;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="master-layout">
+        <div data-options="region:'north'" class="header" style="height:80px">
+            <div class="north-left" style="float: left">
+                <a href="" style="display: block;margin-top: 10px;">
+                    <img src="../img/logo2.png" alt="">
+                </a>
+            </div>
+            <div class="north-right" style="float: right;">
+                <div class="theme-user-info-panel1">
+                    <div class="left">
+                        <img src="../themes/insdep/images/portrait86x86.png" width="40" height="40">
+                    </div>
+                    <div class="center">
+                        <h1>匿名<span class="badge color-success">已认证</span></h1>
+                        <h2>管理员</h2>
+                    </div>
+                </div>
+                <div id="clock"></div>
+            </div>
+        </div>
+        <div data-options="region:'south'" style="height:50px;">
+            <div class="footer">国脉海洋信息发展有限公司 版权所有 © 2004-2016　　　　<a target="_blank" href="/govmade/protected/lucene/actions.html?method=detail&amp;sid=ff2e8a06dd18d0742ee9cc9f05c78f3a6dacf7b0c4ceeb70870b64d2217134ae">使用说明</a> | <a target="_blank" href="/govmade/protected/lucene/actions.html?method=detail&amp;sid=ff2e8a06dd18d074fdf9b2ab5d82c6976665d374a4cf5975671250f81d6f599d">权限规则</a>                | <a href="#">管理办法</a>
+            </div>
+        </div>
+        <div data-options="region:'center',border:false">
+            <div id="pp" style="position:relative">
+                <div style="width:12%;">
+                    <div id="p1" style="height:310px;">
+
+                    </div>
+                    <div id="p2" style="height:310px;">
+                        <div style="width:100%;">
+                            <div id="p2q1" style="height:70px;"></div>
+                            <div id="p2q2" style="height:69px;"></div>
+                            <div id="p2q3" style="height:69px;"></div>
+                            <div id="p2q4" style="height:70px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="width:44%;">
+                    <div id="p3" style="height:312px;">
+                        <div style="width:33%;">
+                            <div id="p3q1" style="height:310px;"></div>
+                        </div>
+                        <div style="width:33%;">
+                            <div id="p3q2" style="height:70px;"></div>
+                        </div>
+                        <div style="width:33%;">
+                            <div id="p3q3" style="height:70px;"></div>
+                        </div>
+                    </div>
+                    <div id="p4" style="height:310px;">
+
+                    </div>
+                </div>
+                <div style="width:44%;">
+                    <div id="p5" style="height:310px;">
+                        <div id="p3_chart" style="width: 100%;height: 100%"></div>
+                    </div>
+                    <div id="p6" style="height:310px;">
+                        <div id="p4_chart" style="width: 100%;height: 100%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--easyui相关-->
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../themes/insdep/jquery.insdep-extend.min.js"></script>
+    <!--easyui相关结束-->
+    <!--第三方插件加载-->
+    <script type="text/javascript" src="../js/plugins/echarts.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.portal.js"></script>
+    <!--第三方插件加载结束-->
+    <!--自定义js-->
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/lib.js"></script>
+    <!--自定义js结束-->
+    <script>
+        $(function() {
+            window.setInterval("realSysTime(clock)", 1000); //实时获取并显示系统时间 
+            /*布局部分*/
+            $('#master-layout').layout({
+                fit: true /*布局框架全屏*/
+            });
+
+            $('#pp').portal({
+                border: false,
+                fit: true
+            });
+            $('#pp').portal('resize');
+
+            $('#p2').portal({
+                border: false,
+                fit: true
+            });
+            $('#p2').portal('resize');
+
+            $('#p3').portal({
+                border: false,
+                fit: true
+            });
+            $('#p3').portal('resize');
+
+
+            $('#p1').panel({
+                onLoad: function() {
+                    alert('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

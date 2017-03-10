@@ -1,0 +1,327 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge" />
+    <link rel="shortcut icon" href="example/favicon.ico" />
+    <title>jQuery EasyUI 1.5.x Of Insdep theme examples</title>
+
+    <link href="../themes/insdep/easyui.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/default_theme.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/icon.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/iconfont/iconfont.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/main.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/portal.css" rel="stylesheet" type="text/css">
+    <link href="../css/sjzs.css" rel="stylesheet" type="text/css">
+
+    <style type="text/css">
+        .layout-panel-west {
+            border-right: 1px solid #c5c5c5;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="master-layout">
+        <div data-options="region:'north'" class="header" style="height:40px">
+            <div class="north-left" style="float: left">
+                <a href="" style="display: block;margin-top: 10px;">
+                    <img src="../img/logo2.png" alt="">
+                </a>
+            </div>
+            <div class="north-right" style="float: right;">
+                <div class="theme-user-info-panel1">
+                    <div class="left">
+                        <img src="../themes/insdep/images/portrait86x86.png" width="40" height="40">
+                    </div>
+                    <div class="center">
+                        <h1>匿名<span class="badge color-success">已认证</span></h1>
+                        <h2>管理员</h2>
+                    </div>
+                </div>
+                <div id="clock"></div>
+            </div>
+        </div>
+        <!--<div data-options="region:'south'" style="height:50px;">
+            <div class="footer">国脉海洋信息发展有限公司 版权所有 © 2004-2016　　　　<a target="_blank" href="/govmade/protected/lucene/actions.html?method=detail&amp;sid=ff2e8a06dd18d0742ee9cc9f05c78f3a6dacf7b0c4ceeb70870b64d2217134ae">使用说明</a> | <a target="_blank" href="/govmade/protected/lucene/actions.html?method=detail&amp;sid=ff2e8a06dd18d074fdf9b2ab5d82c6976665d374a4cf5975671250f81d6f599d">权限规则</a>                | <a href="#">管理办法</a>
+            </div>
+        </div>-->
+        <div data-options="region:'center',border:false">
+            <div id="pp" style="height:100%">
+                <div class="grid-cell flex-col u-14" style="height:100%">
+                    <div class="grid-cell">
+                        <div id="p1" data-options="fit:true"></div>
+                    </div>
+                    <div class="grid-cell p-10"></div>
+                    <div class="grid-cell flex-col">
+                        <div class="grid-cell">
+                            <div id="p2" data-options="fit:true"></div>
+                        </div>
+                        <div class="grid-cell p-10"></div>
+                        <div class="grid-cell">
+                            <div id="p3" data-options="fit:true"></div>
+                        </div>
+                        <div class="grid-cell p-10"></div>
+                        <div class="grid-cell">
+                            <div id="p4" data-options="fit:true"></div>
+                        </div>
+                        <div class="grid-cell p-10"></div>
+                        <div class="grid-cell">
+                            <div id="p5" data-options="fit:true"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-cell p-10"></div>
+                <div class="grid-cell flex-col" style="height:100%">
+                    <div class="grid-cell flex-row">
+                        <div class="grid-cell flex-col bd1">
+                            <div class="grid-cell u-60">
+                                <div id="p6" data-options="fit:true,border:false">
+                                    <div id="p6_chart" style="width: 100%;height:100%;"></div>
+                                </div>
+                            </div>
+                            <div class="grid-cell">
+                                <p>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-cell p-10"></div>
+                        <div class="grid-cell flex-col">
+                            <div class="grid-cell">
+                                <div id="p7" data-options="fit:true">
+                                    <div id="p7_chart" style="width: 100%;height:100%;"></div>
+                                </div>
+                            </div>
+                            <div class="grid-cell p-10"></div>
+                            <div class="grid-cell">
+                                <div id="p8" data-options="fit:true">
+                                    <div id="p8_chart" style="width: 100%;height:100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-cell p-10"></div>
+                        <div class="grid-cell flex-col">
+                            <div class="grid-cell">
+                                <div id="p9" data-options="fit:true">
+                                    <div id="p9_chart" style="width: 100%;height:100%;"></div>
+                                </div>
+                            </div>
+                            <div class="grid-cell p-10"></div>
+                            <div class="grid-cell">
+                                <div id="p10" data-options="fit:true">
+                                    <div id="p10_chart" style="width: 100%;height:100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-cell p-10"></div>
+
+                    <div class="grid-cell flex-col bd1">
+                        <div class="grid-cell u-25 flex-row">
+
+                        </div>
+                        <div class="grid-cell">
+                            <div id="p11" data-options="fit:true, border:false">
+                                <div id="p11_chart" style="width: 100%;height:100%;"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="grid-cell p-10"></div>
+                <div class="grid-cell flex-col" style="height:100%">
+                    <div class="grid-cell">
+                        <div id="p12" data-options="fit:true">
+                            <div id="p12_chart" style="width: 100%;height:100%;"></div>
+                        </div>
+                    </div>
+                    <div class="grid-cell p-10"></div>
+                    <div class="grid-cell">
+                        <div id="p13" data-options="fit:true">
+                            <div id="p13_chart" style="width: 100%;height:100%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--easyui相关-->
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../themes/insdep/jquery.insdep-extend.min.js"></script>
+    <!--easyui相关结束-->
+    <!--第三方插件加载-->
+    <script type="text/javascript" src="../js/plugins/echarts.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.portal.js"></script>
+    <!--第三方插件加载结束-->
+    <!--自定义js-->
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/lib.js"></script>
+    <script type="text/javascript" src="../js/sjzs.js"></script>
+    <!--自定义js结束-->
+    <script>
+        $(function() {
+            window.setInterval("realSysTime(clock)", 1000); //实时获取并显示系统时间 
+            /*布局部分*/
+            $('#master-layout').layout({
+                fit: true /*布局框架全屏*/
+            });
+
+            $('#p1').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p2').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p3').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p4').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p5').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p6').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p7').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p8').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p9').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p10').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p11').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p12').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p13').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+
+            var option = {
+                title: {
+                    text: '国有及国有控股企业',
+                    x: 'center',
+                    bottom: 5,
+                    textStyle: {
+                        fontSize: 16,
+                        fontWeight: 'bolder'
+                    }
+                },
+                tooltip: {
+                    formatter: "{a} <br/>{b} : {c}%"
+                },
+                series: [{
+                    name: '业务指标',
+                    type: 'gauge',
+                    radius: '90%',
+                    axisLine: { // 坐标轴线
+                        lineStyle: { // 属性lineStyle控制线条样式
+                            width: 5
+                        }
+                    },
+                    axisTick: { // 坐标轴小标记
+                        length: 5, // 属性length控制线长
+                        lineStyle: { // 属性lineStyle控制线条样式
+                            color: 'auto'
+                        }
+                    },
+                    splitLine: { // 分隔线
+                        length: 10, // 属性length控制线长
+                        lineStyle: { // 属性lineStyle（详见lineStyle）控制线条样式
+                            color: 'auto'
+                        }
+                    },
+                    pointer: {
+                        width: 2
+                    },
+                    detail: {
+                        textStyle: { // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                            fontWeight: 'normal',
+                            fontSize: 14
+                        }
+                    },
+                    data: [{
+                        value: 50,
+                        name: '完成率'
+                    }]
+                }]
+            };
+
+            initChart('p6_chart', option);
+            initChart('p7_chart');
+            initChart('p8_chart');
+            initChart('p9_chart');
+            initChart('p10_chart');
+            initChart1('p11_chart');
+            initChart2('p12_chart');
+            initChart3('p13_chart');
+        });
+    </script>
+
+</body>
+
+</html>
