@@ -1,0 +1,57 @@
+<div class="easyui-layout" data-options="fit:true">
+    <div data-options="region:'west',split:false" style="width:200px;padding:5px">
+        <ul id="contentCategoryTree" class="easyui-tree" data-options="url:'data/tree_data1.json',animate: true,method : 'GET'">
+        </ul>
+    </div>
+    <div data-options="region:'center',border:false">
+        <div style="height:100%;width: 100%;">
+            <table id="dg-sjjc" title="Basic DataGrid" data-options="singleSelect:true,pagination:true,
+                fitColumns:true,toolbar:'#tb-sjjc',collapsible:true,url:'data/datagrid_data1.json',method:'get'" style="height:100%;width: 100%;">
+                <thead>
+                    <tr>
+                        <th data-options="field:'ck',checkbox:true"></th>
+                        <th data-options="field:'itemid',width:80">Item ID</th>
+                        <th data-options="field:'productid',width:100">Product</th>
+                        <th data-options="field:'listprice',width:80,align:'right'">List Price</th>
+                        <th data-options="field:'unitcost',width:80,align:'right'">Unit Cost</th>
+                        <th data-options="field:'attr1',width:150">Attribute</th>
+                        <th data-options="field:'status',width:60,align:'center'">Status</th>
+                        <th data-options="field:'do',width:200,align:'center',formatter:_initButton">操作</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+        <div id="tb-sjjc">
+            Date From: <input class="easyui-datebox" style="width:110px"> To: <input class="easyui-datebox" style="width:110px"> Language:
+            <select class="easyui-combobox" panelHeight="auto" style="width:100px">
+			<option value="java">Java</option>
+			<option value="c">C</option>
+			<option value="basic">Basic</option>
+			<option value="perl">Perl</option>
+			<option value="python">Python</option>
+		</select>
+            <a href="#" class="easyui-linkbutton iconfont" iconCls="icon-search">搜索</a>
+            <a href="#" class="easyui-linkbutton iconfont button-inverse" iconCls="icon-plus-box-outline" style="float: right;">新增</a>
+        </div>
+    </div>
+</div>
+<div id="wd-sjjc" class="easyui-window" title="Modal Window" data-options="modal:true,closed:true,iconCls:'icon-save',href:'edit.html'" style=" width:600px;height:400px;padding:10px; ">
+</div>
+<script type="text/javascript" src="js/common.js"></script>
+<script>
+    $(function() {
+        $('#dg-sjjc').datagrid({
+            onLoadSuccess: function() {
+                var target = this;
+                $('.easyui-linkbutton').each(function() {
+                    $(this).linkbutton();
+                });
+            }
+        });
+    });
+
+    function _onEdit(e) {
+        Common.onEdit(e, $('#wd-sjjc'), $('#form'));
+    }
+</script>

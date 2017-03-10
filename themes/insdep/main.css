@@ -1,0 +1,30 @@
+.header {
+    background: url('../../img/top-bg.jpg') no-repeat;
+}
+
+.icon-w20 .l-btn-text {
+    width: 20px !important;
+}
+
+.icon-w20 .l-btn-icon {
+    width: 20px !important;
+    height: 20px !important;
+    font-size: 20px !important;
+}
+
+.datagrid .easyui-linkbutton {
+    margin-right: 5px;
+}
+
+.footer {
+    text-align: center;
+    font-size: 14px;
+    line-height: 40px;
+    height: 100%;
+    background: #f8f8f8;
+}
+
+.footer a {
+    color: #404040;
+    text-decoration: none;
+}

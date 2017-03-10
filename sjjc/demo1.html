@@ -1,0 +1,95 @@
+<div class="easyui-layout" data-options="fit:true">
+    <div data-options="region:'west',split:false" style="width:200px;">
+        <ul class="easyui-datalist" title="文件管理" lines="true" data-options="toolbar:'#tb1',fit:true,border:false">
+            <li value="AL">Alabama</li>
+            <li value="AK">Alaska</li>
+            <li value="AZ">Arizona</li>
+            <li value="AR">Arkansas</li>
+            <li value="CA">California</li>
+            <li value="CO">Colorado</li>
+            <li value="CT">Connecticut</li>
+            <li value="DE">Delaware</li>
+            <li value="FL">Florida</li>
+            <li value="GA">Georgia</li>
+            <li value="HI">Hawaii</li>
+            <li value="ID">Idaho</li>
+            <li value="IL">Illinois</li>
+            <li value="IN">Indiana</li>
+            <li value="IA">Iowa</li>
+            <li value="KS">Kansas</li>
+        </ul>
+        <div id="tb1">
+            <input class="easyui-searchbox" style="width:100%;">
+        </div>
+        <!--<div id="p" class="easyui-panel" title="文件管理" data-options="fit:true,border:false">
+            <p>panel content.</p>
+            <p>panel content.</p>
+        </div>-->
+    </div>
+    <div data-options="region:'center',border:false">
+        <div style="height:100%;width: 100%;">
+            <table id="dg1" title="Basic DataGrid" data-options="singleSelect:true,pagination:true,
+                fitColumns:true,toolbar:'#tb',collapsible:true,url:'data/datagrid_data1.json',method:'get'" style="height:100%;width: 100%;">
+                <thead>
+                    <tr>
+                        <th data-options="field:'ck',checkbox:true"></th>
+                        <th data-options="field:'itemid',width:80">Item ID</th>
+                        <th data-options="field:'productid',width:100">Product</th>
+                        <th data-options="field:'listprice',width:80,align:'right'">List Price</th>
+                        <th data-options="field:'unitcost',width:80,align:'right'">Unit Cost</th>
+                        <th data-options="field:'attr1',width:150">Attribute</th>
+                        <th data-options="field:'status',width:60,align:'center'">Status</th>
+                        <th data-options="field:'do',width:200,align:'center',formatter:_initButton">操作</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+        <div id="tb">
+            Date From: <input class="easyui-datebox" style="width:110px"> To: <input class="easyui-datebox" style="width:110px"> Language:
+            <select class="easyui-combobox" panelHeight="auto" style="width:100px">
+			<option value="java">Java</option>
+			<option value="c">C</option>
+			<option value="basic">Basic</option>
+			<option value="perl">Perl</option>
+			<option value="python">Python</option>
+		</select>
+            <a href="#" class="easyui-linkbutton iconfont" iconCls="icon-search">搜索</a>
+            <a href="#" class="easyui-linkbutton iconfont button-inverse" iconCls="icon-plus-box-outline" style="float: right;">新增</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function() {
+        $('#dg1').datagrid({
+            onLoadSuccess: function() {
+                var target = this;
+                $('.easyui-linkbutton').each(function() {
+                    $(this).linkbutton();
+                });
+            }
+        });
+    });
+
+    function _onEdit(e) {
+        var rowdata = JSON.parse(e.getAttribute('rowdata'));
+        $("#window").window({
+            onLoad: function() {
+                //回显数据
+                $("#form").form("load", rowdata);
+            }
+        }).window("open");
+
+        console.log(rowdata);
+    }
+
+    function _initButton(val, data, index) {
+        var html = "";
+        html += "<a class='easyui-linkbutton iconfont button-default' data-options='iconCls:\"icon-eye\"' rowdata='" + JSON.stringify(data) + "'>查看</a>";
+        html += "<a class='easyui-linkbutton iconfont button-warning' onclick='_onEdit(this)' data-options='iconCls:\"icon-lead-pencil\"' rowdata='" + JSON.stringify(data) + "'>编辑</a>";
+        html += "<a class='easyui-linkbutton iconfont button-danger' data-options='iconCls:\"icon-delete\"' rowdataid='" + data.itemid + "'>删除</a>";
+
+        return html;
+    }
+</script>
