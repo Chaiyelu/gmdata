@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge" />
+    <link rel="shortcut icon" href="example/favicon.ico" />
+    <title>jQuery EasyUI 1.5.x Of Insdep theme examples</title>
+
+    <link href="../themes/insdep/easyui.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/default_theme.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/icon.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/iconfont/iconfont.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/main.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/portal.css" rel="stylesheet" type="text/css">
+    <link href="../css/sjzs.css" rel="stylesheet" type="text/css">
+
+    <style type="text/css">
+        .layout-panel-west {
+            border-right: 1px solid #c5c5c5;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="master-layout">
+        <div data-options="region:'north'" class="header" style="height:40px">
+            <div class="north-left" style="float: left">
+                <a href="" style="display: block;margin-top: 10px;">
+                    <img src="../img/logo2.png" alt="">
+                </a>
+            </div>
+        </div>
+        <!--<div data-options="region:'south'" style="height:50px;">
+            <div class="footer">国脉海洋信息发展有限公司 版权所有 © 2004-2016　　　　<a target="_blank" href="/govmade/protected/lucene/actions.html?method=detail&amp;sid=ff2e8a06dd18d0742ee9cc9f05c78f3a6dacf7b0c4ceeb70870b64d2217134ae">使用说明</a> | <a target="_blank" href="/govmade/protected/lucene/actions.html?method=detail&amp;sid=ff2e8a06dd18d074fdf9b2ab5d82c6976665d374a4cf5975671250f81d6f599d">权限规则</a>                | <a href="#">管理办法</a>
+            </div>
+        </div>-->
+        <div data-options="region:'center',border:false">
+            <div id="qq" class="flex-col" style="height:100%">
+                <div class="grid-cell flex-row u-70 jsbt">
+                    <div class="grid-cell u-66z"></div>
+                    <div class="grid-cell u-33z flex-col" style="height:100%">
+                        <div class="grid-cell u-40 bd1">
+                            <table title="办件列表" class="easyui-datagrid" style="width:650px;height:auto" data-options="fit:true,fitColumns:true,border:false,singleSelect:true">
+                                <thead>
+                                    <tr>
+                                        <th field="itemid" width="60">待审服务</th>
+                                        <th field="productid" width="80">待审服务版本</th>
+                                        <th field="listprice" width="80">提交人</th>
+                                        <th field="unitcost" width="80">提交时间</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="grid-cell flex-row u-60 bd1 wrap">
+                            <!--<div class="grid-cell flex-col" style="height:100%;">
+                                <div class="grid-cell" style="height:50%;">
+                                    <div id="p6" data-options="fit:true,border:false">
+                                        <div id="p6_chart" style="width: 100%;height:100%;"></div>
+                                    </div>
+                                </div>
+                                <div class="grid-cell" style="height:50%;">
+                                    <div id="p7" data-options="fit:true,border:false">
+                                        <div id="p7_chart" style="width: 100%;height:100%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-cell flex-col" style="height:100%;">
+                                <div class="grid-cell" style="height:50%;">
+                                    <div id="p8" data-options="border:false" style="height: 100%">
+                                        <div id="p8_chart" style="width: 100%;height:100%;"></div>
+                                    </div>
+                                </div>
+                                <div class="grid-cell" style="height:50%;">
+                                    <div id="p9" data-options="border:false" style="height: 100%">
+                                        <div id="p9_chart" style="width: 100%;height:100%;"></div>
+                                    </div>
+                                </div>
+                            </div>-->
+                            <div class="grid-cell u-50" style="height:50%;">
+                                <div id="p6" data-options="fit:true,border:false">
+                                    <div id="p6_chart" style="width: 100%;height:100%;"></div>
+                                </div>
+                            </div>
+                            <div class="grid-cell u-50" style="height:50%;">
+                                <div id="p7" data-options="fit:true,border:false">
+                                    <div id="p7_chart" style="width: 100%;height:100%;"></div>
+                                </div>
+                            </div>
+                            <div class="grid-cell u-50" style="height:50%;">
+                                <div id="p8" data-options="fit:true,border:false">
+                                    <div id="p8_chart" style="width: 100%;height:100%;"></div>
+                                </div>
+                            </div>
+                            <div class="grid-cell u-50" style="height:50%;">
+                                <div id="p9" data-options="fit:true,border:false">
+                                    <div id="p9_chart" style="width: 100%;height:100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-cell flex-row u-30 jsbt">
+                    <div class="grid-cell u-33z bd1">
+                        <div id="p10" data-options="fit:true,border:false">
+                            <div id="p10_chart" style="width: 100%;height:100%;"></div>
+                        </div>
+                    </div>
+                    <div class="grid-cell u-33z bd1">
+                        <div id="p11" data-options="fit:true,border:false">
+                            <div id="p11_chart" style="width: 100%;height:100%;"></div>
+                        </div>
+                    </div>
+                    <div class="grid-cell u-33z bd1">
+                        <div id="p12" data-options="fit:true,border:false">
+                            <div id="p12_chart" style="width: 100%;height:100%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--easyui相关-->
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../themes/insdep/jquery.insdep-extend.min.js"></script>
+    <!--easyui相关结束-->
+    <!--第三方插件加载-->
+    <script type="text/javascript" src="../js/plugins/echarts.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.portal.js"></script>
+    <!--第三方插件加载结束-->
+    <!--自定义js-->
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/lib.js"></script>
+    <script type="text/javascript" src="../js/sjzs.js"></script>
+    <!--自定义js结束-->
+    <script>
+        $(function() {
+            /*布局部分*/
+            $('#master-layout').layout({
+                fit: true /*布局框架全屏*/
+            });
+
+            $('#p6').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p7').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p8').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p9').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p10').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p11').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p12').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p13').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+
+            Chart.initChart('p6_chart');
+            Chart.initChart('p7_chart');
+            Chart.initChart('p8_chart');
+            Chart.initChart('p9_chart');
+            Chart.initChartbing('p10_chart');
+
+            var option1 = {
+                title: {
+                    text: '2015年11月12345业务类别统计',
+                    x: 'center'
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'shadow'
+                    }
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'value',
+                    boundaryGap: [0, 0.01]
+                },
+                yAxis: {
+                    type: 'category',
+                    data: ['表扬类', '其他类', '建议类', '举报类', '咨询类', '求助类']
+                },
+                series: [
+
+                    {
+                        name: '2012年',
+                        type: 'bar',
+                        data: [19325, 23438, 31000, 121594, 134141, 681807]
+                    }
+                ]
+            };
+
+            Chart.initChart2('p11_chart', option1);
+            Chart.initChart2('p12_chart');
+        });
+    </script>
+
+</body>
+
+</html>

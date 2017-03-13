@@ -1,0 +1,458 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge" />
+    <link rel="shortcut icon" href="example/favicon.ico" />
+    <title>jQuery EasyUI 1.5.x Of Insdep theme examples</title>
+
+    <link href="../themes/insdep/easyui.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/default_theme.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/icon.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/iconfont/iconfont.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/main.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/portal.css" rel="stylesheet" type="text/css">
+    <link href="../css/sjzs.css" rel="stylesheet" type="text/css">
+
+    <style type="text/css">
+        .layout-panel-west {
+            border-right: 1px solid #c5c5c5;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="master-layout">
+        <div data-options="region:'north'" class="header" style="height:40px">
+            <div class="north-left" style="float: left">
+                <a href="" style="display: block;margin-top: 10px;">
+                    <img src="../img/logo2.png" alt="">
+                </a>
+            </div>
+        </div>
+        <!--<div data-options="region:'south'" style="height:50px;">
+            <div class="footer">国脉海洋信息发展有限公司 版权所有 © 2004-2016　　　　<a target="_blank" href="/govmade/protected/lucene/actions.html?method=detail&amp;sid=ff2e8a06dd18d0742ee9cc9f05c78f3a6dacf7b0c4ceeb70870b64d2217134ae">使用说明</a> | <a target="_blank" href="/govmade/protected/lucene/actions.html?method=detail&amp;sid=ff2e8a06dd18d074fdf9b2ab5d82c6976665d374a4cf5975671250f81d6f599d">权限规则</a>                | <a href="#">管理办法</a>
+            </div>
+        </div>-->
+        <div data-options="region:'center',border:false">
+            <div id="qq" class="flex-col" style="height:100%">
+                <div class="grid-cell flex-row u-33 jsbt">
+                    <div class="grid-cell u-33z bd1">
+                        <div id="p2" data-options="fit:true,border:false">
+                            <div id="p2_chart" style="width: 100%;height:100%;"></div>
+                        </div>
+                    </div>
+                    <div class="grid-cell u-33z bd1">
+                        <div id="p3" data-options="fit:true,border:false">
+                            <div id="p3_chart" style="width: 100%;height:100%;"></div>
+                        </div>
+                    </div>
+                    <div class="grid-cell u-33z bd1">
+                        <div id="p4" data-options="fit:true,border:false">
+                            <div id="p4_chart" style="width: 100%;height:100%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-cell flex-row u-66 jsbt">
+                    <div class="grid-cell u-33z flex-col">
+                        <div class="grid-cell u-50 bd1"></div>
+                        <div class="grid-cell u-50 bd1">
+                            <div id="p5" data-options="fit:true,border:false">
+                                <div id="p5_chart" style="width: 100%;height:100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-cell u-66z">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--easyui相关-->
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../themes/insdep/jquery.insdep-extend.min.js"></script>
+    <!--easyui相关结束-->
+    <!--第三方插件加载-->
+    <script type="text/javascript" src="../js/plugins/echarts.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.portal.js"></script>
+    <!--第三方插件加载结束-->
+    <!--自定义js-->
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/lib.js"></script>
+    <script type="text/javascript" src="../js/sjzs.js"></script>
+    <!--自定义js结束-->
+    <script>
+        $(function() {
+            /*布局部分*/
+            $('#master-layout').layout({
+                fit: true /*布局框架全屏*/
+            });
+
+            $('#p1').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p2').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p3').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p4').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p5').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p6').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p7').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p8').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p9').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p10').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p11').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p12').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+            $('#p13').panel({
+                onOpen: function() {
+                    console.log('loaded successfully');
+                    //发起异步请求
+
+                }
+            });
+
+            var option = {
+                tooltip: {
+                    trigger: 'axis'
+                },
+                xAxis: [{
+                    type: 'category',
+                    data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+                }],
+                yAxis: [{
+                    type: 'value',
+                    name: '水量',
+                    min: 0,
+                    max: 250,
+                    interval: 50,
+                    axisLabel: {
+                        formatter: '{value} ml'
+                    }
+                }],
+                series: [{
+                    name: '蒸发量',
+                    type: 'bar',
+                    data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+                }, {
+                    name: '平均温度',
+                    type: 'line',
+                    data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+                }]
+            };
+
+
+            var option1 = {
+                title: {
+                    text: '国有及国有控股企业',
+                    left: 20,
+                    top: 5,
+                    textStyle: {
+                        fontSize: 14
+                    }
+                },
+                series: [{
+                    name: '速度',
+                    type: 'gauge',
+                    z: 3,
+                    min: 0,
+                    max: 220,
+                    splitNumber: 11,
+                    radius: '70%',
+                    center: ['20%', '50%'], // 默认全局居中
+                    axisLine: { // 坐标轴线
+                        lineStyle: { // 属性lineStyle控制线条样式
+                            width: 5
+                        }
+                    },
+                    axisTick: { // 坐标轴小标记
+                        length: 6, // 属性length控制线长
+                        lineStyle: { // 属性lineStyle控制线条样式
+                            color: 'auto'
+                        }
+                    },
+                    splitLine: { // 分隔线
+                        length: 8, // 属性length控制线长
+                        lineStyle: { // 属性lineStyle（详见lineStyle）控制线条样式
+                            color: 'auto'
+                        }
+                    },
+                    title: {
+                        textStyle: { // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                            fontWeight: 'bolder',
+                            fontSize: 20,
+                            fontStyle: 'italic'
+                        }
+                    },
+                    detail: {
+                        textStyle: { // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                            fontWeight: 'bolder'
+                        }
+                    },
+                    pointer: {
+                        width: 4
+                    },
+                    data: [{
+                        value: 40,
+                        name: 'km/h'
+                    }]
+                }, {
+                    name: '速度',
+                    type: 'gauge',
+                    z: 3,
+                    min: 0,
+                    max: 100,
+                    splitNumber: 10,
+                    radius: '50%',
+                    center: ['55%', '28%'], // 默认全局居中
+                    axisLine: { // 坐标轴线
+                        lineStyle: { // 属性lineStyle控制线条样式
+                            width: 5
+                        }
+                    },
+                    axisTick: { // 坐标轴小标记
+                        length: 6, // 属性length控制线长
+                        lineStyle: { // 属性lineStyle控制线条样式
+                            color: 'auto'
+                        }
+                    },
+                    splitLine: { // 分隔线
+                        length: 8, // 属性length控制线长
+                        lineStyle: { // 属性lineStyle（详见lineStyle）控制线条样式
+                            color: 'auto'
+                        }
+                    },
+                    title: {
+                        top: 20,
+                        textStyle: { // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                            fontSize: 12
+                        }
+                    },
+                    detail: {
+                        textStyle: { // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                            fontSize: 16
+                        }
+                    },
+                    pointer: {
+                        width: 2
+                    },
+                    data: [{
+                        value: 40,
+                        name: '交通出行'
+                    }]
+                }, {
+                    name: '速度',
+                    type: 'gauge',
+                    z: 3,
+                    min: 0,
+                    max: 100,
+                    splitNumber: 10,
+                    radius: '50%',
+                    center: ['55%', '77%'], // 默认全局居中
+                    axisLine: { // 坐标轴线
+                        lineStyle: { // 属性lineStyle控制线条样式
+                            width: 5
+                        }
+                    },
+                    axisTick: { // 坐标轴小标记
+                        length: 6, // 属性length控制线长
+                        lineStyle: { // 属性lineStyle控制线条样式
+                            color: 'auto'
+                        }
+                    },
+                    splitLine: { // 分隔线
+                        length: 8, // 属性length控制线长
+                        lineStyle: { // 属性lineStyle（详见lineStyle）控制线条样式
+                            color: 'auto'
+                        }
+                    },
+                    title: {
+                        top: 20,
+                        textStyle: { // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                            fontSize: 12
+                        }
+                    },
+                    detail: {
+                        textStyle: { // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                            fontSize: 16
+                        }
+                    },
+                    pointer: {
+                        width: 2
+                    },
+                    data: [{
+                        value: 40,
+                        name: '公共安全'
+                    }]
+                }, {
+                    name: '速度',
+                    type: 'gauge',
+                    z: 3,
+                    min: 0,
+                    max: 100,
+                    splitNumber: 10,
+                    radius: '50%',
+                    center: ['85%', '28%'], // 默认全局居中
+                    axisLine: { // 坐标轴线
+                        lineStyle: { // 属性lineStyle控制线条样式
+                            width: 5
+                        }
+                    },
+                    axisTick: { // 坐标轴小标记
+                        length: 6, // 属性length控制线长
+                        lineStyle: { // 属性lineStyle控制线条样式
+                            color: 'auto'
+                        }
+                    },
+                    splitLine: { // 分隔线
+                        length: 8, // 属性length控制线长
+                        lineStyle: { // 属性lineStyle（详见lineStyle）控制线条样式
+                            color: 'auto'
+                        }
+                    },
+                    title: {
+                        top: 20,
+                        textStyle: { // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                            fontSize: 12,
+                        }
+                    },
+                    detail: {
+                        textStyle: { // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                            fontSize: 16
+                        }
+                    },
+                    pointer: {
+                        width: 2
+                    },
+                    data: [{
+                        value: 40,
+                        name: '基础设施'
+                    }]
+                }, {
+                    name: '速度',
+                    type: 'gauge',
+                    z: 3,
+                    min: 0,
+                    max: 100,
+                    splitNumber: 10,
+                    radius: '50%',
+                    center: ['85%', '77%'], // 默认全局居中
+                    axisLine: { // 坐标轴线
+                        lineStyle: { // 属性lineStyle控制线条样式
+                            width: 5
+                        }
+                    },
+                    axisTick: { // 坐标轴小标记
+                        length: 6, // 属性length控制线长
+                        lineStyle: { // 属性lineStyle控制线条样式
+                            color: 'auto'
+                        }
+                    },
+                    splitLine: { // 分隔线
+                        length: 8, // 属性length控制线长
+                        lineStyle: { // 属性lineStyle（详见lineStyle）控制线条样式
+                            color: 'auto'
+                        }
+                    },
+                    title: {
+                        top: 20,
+                        textStyle: { // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                            fontSize: 12
+                        }
+                    },
+                    detail: {
+                        textStyle: { // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                            fontSize: 16
+                        }
+                    },
+                    pointer: {
+                        width: 2
+                    },
+                    data: [{
+                        value: 40,
+                        name: '生态环境'
+                    }]
+                }]
+            };
+            Chart.initChart('p3_chart', option1);
+            Chart.initChart2('p2_chart', option);
+
+            Chart.initChart3('p5_chart');
+        });
+    </script>
+
+</body>
+
+</html>
