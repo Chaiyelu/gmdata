@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge" />
+    <link rel="shortcut icon" href="example/favicon.ico" />
+    <title>jQuery EasyUI 1.5.x Of Insdep theme examples</title>
+
+    <link href="../themes/insdep/easyui.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/default_theme.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/icon.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/iconfont/iconfont.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/main.css" rel="stylesheet" type="text/css">
+    <link href="../themes/insdep/portal.css" rel="stylesheet" type="text/css">
+
+    <style type="text/css">
+        .layout-panel-west {
+            border-right: 1px solid #c5c5c5;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="master-layout">
+        <div data-options="region:'north'" class="header" style="height:80px">
+            <div class="north-left" style="float: left">
+                <a href="" style="display: block;margin-top: 10px;">
+                    <img src="../img/logo2.png" alt="">
+                </a>
+            </div>
+            <div class="north-right" style="float: right;">
+                <div class="theme-user-info-panel1">
+                    <div class="left">
+                        <img src="../themes/insdep/images/portrait86x86.png" width="40" height="40">
+                    </div>
+                    <div class="center">
+                        <h1>匿名<span class="badge color-success">已认证</span></h1>
+                        <h2>管理员</h2>
+                    </div>
+                </div>
+                <div id="clock"></div>
+            </div>
+        </div>
+        <div data-options="region:'south'" style="height:50px;">
+            <div class="footer">国脉海洋信息发展有限公司 版权所有 © 2004-2016　　　　<a target="_blank" href="/govmade/protected/lucene/actions.html?method=detail&amp;sid=ff2e8a06dd18d0742ee9cc9f05c78f3a6dacf7b0c4ceeb70870b64d2217134ae">使用说明</a> | <a target="_blank" href="/govmade/protected/lucene/actions.html?method=detail&amp;sid=ff2e8a06dd18d074fdf9b2ab5d82c6976665d374a4cf5975671250f81d6f599d">权限规则</a>                | <a href="#">管理办法</a>
+            </div>
+        </div>
+        <div data-options="region:'center',border:false">
+            <div id="tt" class="easyui-tabs" data-options="border:false,tools:'#tab-tools'" style="width:100%;height:100%;">
+                <div title="首页" style="display:none;" data-options="href:'home.html'">
+                </div>
+            </div>
+            <div id="tab-tools">
+                <a href="javascript:void(0)" class="easyui-linkbutton iconfont icon-w20" data-options="plain:true,iconCls:'icon-account-settings-variant'" onclick="addPanel()"></a>
+                <a href="javascript:void(0)" class="easyui-linkbutton iconfont icon-w20" data-options="plain:true,iconCls:'icon-settings'" onclick="removePanel()"></a>
+                <a href="javascript:void(0)" class="easyui-linkbutton iconfont icon-w20" data-options="plain:true,iconCls:'icon-email-outline'" onclick="removePanel()"></a>
+                <a href="javascript:void(0)" class="easyui-linkbutton iconfont icon-w20" data-options="plain:true,iconCls:'icon-logout'" onclick="removePanel()"></a>
+            </div>
+        </div>
+        <div id="contentCategoryMenu" class="easyui-menu" data-options="onClick:menuHandler">
+            <div data-options="name:'closeAll'">关闭所有标签</div>
+            <div data-options="name:'closeOther'">关闭其他标签</div>
+        </div>
+    </div>
+    <!--easyui相关-->
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../themes/insdep/jquery.insdep-extend.min.js"></script>
+    <!--easyui相关结束-->
+    <!--第三方插件加载-->
+    <script type="text/javascript" src="../js/plugins/echarts.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.portal.js"></script>
+    <!--第三方插件加载结束-->
+    <!--自定义js-->
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/lib.js"></script>
+    <!--自定义js结束-->
+    <script>
+        $(function() {
+            window.setInterval("realSysTime(clock)", 1000); //实时获取并显示系统时间 
+            /*布局部分*/
+            $('#master-layout').layout({
+                fit: true /*布局框架全屏*/
+            });
+
+        });
+    </script>
+</body>
+
+</html>

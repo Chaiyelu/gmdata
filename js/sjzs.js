@@ -8,9 +8,11 @@ var Chart = {
                 x: 'center',
                 bottom: 5,
                 textStyle: {
-                    fontSize: 14
+                    fontSize: 14,
+                    color: '#16a1c2'
                 }
             },
+            backgroundColor: 'rgba(0, 0, 0, 0.2)',
             tooltip: {
                 formatter: "{a}"
             },
@@ -44,7 +46,9 @@ var Chart = {
                     textStyle: { // 其余属性默认使用全局文本样式，详见TEXTSTYLE
                         fontWeight: 'normal',
                         fontSize: 10,
-                        fontStyle: 'italic'
+                        fontStyle: {
+                            color: '#16a1c2'
+                        }
                     }
                 },
                 pointer: {
@@ -53,10 +57,11 @@ var Chart = {
                 detail: {
                     textStyle: { // 其余属性默认使用全局文本样式，详见TEXTSTYLE
                         fontWeight: 'normal',
-                        fontSize: 14
+                        fontSize: 14,
+                        color: '#16a1c2'
                     }
                 },
-                data: [{ value: 40, name: 'km/h' }]
+                data: [{ value: 40 }]
             }]
         };
 
@@ -102,21 +107,20 @@ var Chart = {
                         width: 3
                     },
                     title: {
-                        /*text: '国有及国有控股企业',
-                        x: 'center',
-                        bottom: 5,*/
                         textStyle: { // 其余属性默认使用全局文本样式，详见TEXTSTYLE
                             fontWeight: 'bolder',
                             fontSize: 20,
-                            fontStyle: 'italic'
+                            fontStyle: 'italic',
+                            color: '#16a1c2'
                         }
                     },
                     detail: {
                         textStyle: { // 其余属性默认使用全局文本样式，详见TEXTSTYLE
-                            fontWeight: 'bolder'
+                            fontWeight: 'bolder',
+                            color: '#16a1c2'
                         }
                     },
-                    data: [{ value: 40, name: 'km/h' }]
+                    data: [{ value: 40 }]
                 },
                 {
                     name: '转速',
@@ -152,10 +156,11 @@ var Chart = {
                     },
                     detail: {
                         textStyle: { // 其余属性默认使用全局文本样式，详见TEXTSTYLE
-                            fontWeight: 'bolder'
+                            fontWeight: 'bolder',
+                            color: '#16a1c2'
                         }
                     },
-                    data: [{ value: 1.5, name: 'x1000 r/min' }]
+                    data: [{ value: 1.5 }]
                 },
                 {
                     name: '转速',
@@ -192,10 +197,11 @@ var Chart = {
                     },
                     detail: {
                         textStyle: { // 其余属性默认使用全局文本样式，详见TEXTSTYLE
-                            fontWeight: 'bolder'
+                            fontWeight: 'bolder',
+                            color: '#16a1c2'
                         }
                     },
-                    data: [{ value: 1.5, name: 'x1000 r/min' }]
+                    data: [{ value: 1.5 }]
                 }
             ]
         };
@@ -219,14 +225,20 @@ var Chart = {
         defaultOption2 = {
             title: {
                 text: '三大产业增长趋势',
-                x: 'center'
+                x: 'center',
+                textStyle: {
+                    color: '#16a1c2'
+                }
             },
             tooltip: {
                 trigger: 'axis'
             },
             legend: {
                 data: ['第一产业', '第二产业', '第三产业'],
-                bottom: 10
+                bottom: 10,
+                textStyle: {
+                    color: '#16a1c2'
+                }
             },
             calculable: true,
             xAxis: [{
@@ -267,14 +279,20 @@ var Chart = {
         defaultOption3 = option = {
             title: {
                 text: '小微企业登记、注销趋势',
-                x: 'center'
+                x: 'center',
+                textStyle: {
+                    color: '#16a1c2'
+                }
             },
             tooltip: {
                 trigger: 'axis'
             },
             legend: {
                 data: ['登记设立数量', '注销数量'],
-                bottom: 10
+                bottom: 10,
+                textStyle: {
+                    color: '#16a1c2'
+                }
             },
             xAxis: {
                 type: 'category',
@@ -335,15 +353,20 @@ var Chart = {
         defaultOption3 = {
             title: {
                 text: '2015年土地招拍挂数量统计',
-                x: 'center'
+                x: 'center',
+                textStyle: {
+                    color: '#16a1c2'
+                }
             },
             tooltip: {
                 trigger: 'item'
             },
             legend: {
-
                 bottom: '10',
-                data: ['交易成功', '交易失败', '未交易']
+                data: ['交易成功', '交易失败', '未交易'],
+                textStyle: {
+                    color: '#16a1c2'
+                }
             },
             series: [{
                 name: '访问来源',

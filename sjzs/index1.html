@@ -25,10 +25,10 @@
 
 <body>
     <div id="master-layout">
-        <div data-options="region:'north'" class="header" style="height:40px">
-            <div class="north-left" style="float: left">
-                <a href="" style="display: block;margin-top: 10px;">
-                    <img src="../img/logo2.png" alt="">
+        <div data-options="region:'north'" class="header" style="height:40px;background: #043146;">
+            <div class="north-left" style="float: left;padding-left: 15px;">
+                <a href="" style="display: block;line-height: 35px;font-size: 30px;color: #fff;">
+                    城市大数据中心
                 </a>
             </div>
         </div>
@@ -37,12 +37,39 @@
             </div>
         </div>-->
         <div data-options="region:'center',border:false">
-            <div id="qq" class="flex-col" style="height:100%">
+            <div id="qq" class="flex-col" style="height:100%;background: url(../img/bg1.png);">
                 <div class="grid-cell flex-row u-70 jsbt">
-                    <div class="grid-cell u-66z"></div>
+                    <div class="grid-cell u-66z show-mission">
+                        <div class="today-mission">
+                            <div class="today-do">
+                                <h2>今日受理</h2>
+                                <p><span>042</span>件</p>
+                            </div>
+                            <div class="today-end">
+                                <h2>今日办结</h2>
+                                <p><span>021</span>件</p>
+                            </div>
+                        </div>
+                        <div class="year-mission">
+                            <h2>本年累计受理</h2>
+                            <p><span>12042</span>件</p>
+                        </div>
+                        <div class="other-mission">
+                            <table>
+                                <tr>
+                                    <td>昨日受理<span>42</span></td>
+                                    <td>本月受理<span>2336</span></td>
+                                </tr>
+                                <tr>
+                                    <td>昨日办结<span>32</span></td>
+                                    <td>本月办结<span>2242</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
                     <div class="grid-cell u-33z flex-col" style="height:100%">
                         <div class="grid-cell u-40 bd1">
-                            <table title="办件列表" class="easyui-datagrid" style="width:650px;height:auto" data-options="fit:true,fitColumns:true,border:false,singleSelect:true">
+                            <table title="办件列表" class="easyui-datagrid" style="width:650px;height:auto" data-options="fit:true,fitColumns:true,border:false,singleSelect:true,url:'../data/datagrid_data1.json'">
                                 <thead>
                                     <tr>
                                         <th field="itemid" width="60">待审服务</th>

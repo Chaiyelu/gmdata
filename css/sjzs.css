@@ -32,6 +32,11 @@
     display: flex;
     padding: 15px;
     box-sizing: border-box;
+    background: url(../img/bg.png);
+}
+
+#pp .panel-body {
+    background: transparent !important;
 }
 
 #qq {
@@ -40,8 +45,14 @@
     box-sizing: border-box;
 }
 
+#qq .panel-body,
+.panel-header,
+.datagrid-header {
+    background: transparent !important;
+}
+
 .bd1 {
-    border: 1px solid #c5c5c5;
+    border: 1px solid #1b2c3e;
 }
 
 .flex-row {
@@ -131,4 +142,163 @@
 
 .wrap {
     flex-wrap: wrap;
+}
+
+.p11-icon-wrapper {
+    padding: 10px;
+}
+
+.p11-icon-wrapper .grid-cell {
+    padding: 10px 0 5px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.p11-icon-wrapper .grid-cell .iconfont {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.p11-icon-wrapper .grid-cell.current,
+.p11-icon-wrapper .grid-cell:hover {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #000;
+    border-radius: 5px;
+}
+
+.abc {
+    padding: 10px;
+}
+
+.abc h2 {
+    font-size: 12px;
+}
+
+.abc .iconfont {
+    font-size: 50px;
+}
+
+.abc .u-33 {
+    /*text-align: center;*/
+}
+
+.abc p {
+    font-size: 30px;
+}
+
+.gy {
+    padding: 10px;
+}
+
+#pp #p1 {
+    text-align: center;
+}
+
+#pp #p1 h2 {
+    font-size: 12px;
+    margin-top: 15px;
+    color: #16a1c2;
+}
+
+#pp #p1 p {
+    font-size: 30px;
+    color: #fff;
+}
+
+.show-mission {
+    padding: 60px 0 70px 40px;
+}
+
+.show-mission h2 {
+    line-height: 35px;
+    font-size: 35px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    color: #16a1c2;
+}
+
+.show-mission p {
+    line-height: 50px;
+    font-size: 50px;
+    font-weight: normal;
+    margin-bottom: 50px;
+    color: #0fabd3;
+}
+
+.show-mission p span {
+    vertical-align: bottom;
+}
+
+.today-do {
+    display: inline-block;
+    margin-right: 95px;
+}
+
+.today-end {
+    display: inline-block;
+}
+
+.other-mission {}
+
+.other-mission table {
+    border: 1px solid #000;
+}
+
+.other-mission tr {
+    height: 38px;
+}
+
+.other-mission tr td {
+    padding: 0 5px;
+    background: #424242;
+    color: #16a1c2;
+}
+
+.other-mission tr td span {
+    display: inline-block;
+    width: 140px;
+    font-weight: 700;
+    text-align: center;
+    color: #ff9724;
+}
+
+.abcd {}
+
+.abcd>.u-50 {
+    padding: 30px 15px;
+}
+
+.abcd .iconfont {
+    font-size: 60px;
+}
+
+.abcd h2 {
+    margin-bottom: 15px;
+    line-height: 18px;
+    font-size: 18px;
+}
+
+.abcd p {
+    font-size: 25px;
+}
+
+.color1 {
+    color: #b62939;
+}
+
+.color2 {
+    color: #d2761f;
+}
+
+.color3 {
+    color: #76a85f;
+}
+
+.color4 {
+    color: #f537bd;
+}
+
+.color5 {
+    color: #077fcb;
 }

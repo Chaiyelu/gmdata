@@ -25,23 +25,11 @@
 
 <body>
     <div id="master-layout">
-        <div data-options="region:'north'" class="header" style="height:40px">
-            <div class="north-left" style="float: left">
-                <a href="" style="display: block;margin-top: 10px;">
-                    <img src="../img/logo2.png" alt="">
+        <div data-options="region:'north'" class="header" style="height:40px;background: #043146;">
+            <div class="north-left" style="float: left;padding-left: 15px;">
+                <a href="" style="display: block;line-height: 35px;font-size: 30px;color: #fff;">
+                    城市大数据中心
                 </a>
-            </div>
-            <div class="north-right" style="float: right;">
-                <div class="theme-user-info-panel1">
-                    <div class="left">
-                        <img src="../themes/insdep/images/portrait86x86.png" width="40" height="40">
-                    </div>
-                    <div class="center">
-                        <h1>匿名<span class="badge color-success">已认证</span></h1>
-                        <h2>管理员</h2>
-                    </div>
-                </div>
-                <div id="clock"></div>
             </div>
         </div>
         <!--<div data-options="region:'south'" style="height:50px;">
@@ -51,67 +39,112 @@
         <div data-options="region:'center',border:false">
             <div id="pp" style="height:100%">
                 <div class="grid-cell flex-col u-14" style="height:100%">
-                    <div class="grid-cell">
-                        <div id="p1" data-options="fit:true"></div>
+                    <div class="grid-cell bd1 flex-col">
+                        <div class="grid-cell u-40" style="text-align: center;">
+                            <img src="../img/city.png" alt="">
+                        </div>
+                        <div class="grid-cell u-60">
+                            <div id="p1" data-options="fit:true,border:false">
+                                <h2>新注册企业(家)</h2>
+                                <p>7265</p>
+                                <h2>新注册企业(家)</h2>
+                                <p>7265</p>
+                                <h2>新注册企业(家)</h2>
+                                <p>7265</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="grid-cell p-10"></div>
                     <div class="grid-cell flex-col">
-                        <div class="grid-cell">
-                            <div id="p2" data-options="fit:true"></div>
+                        <div class="grid-cell bd1 flex-row abc color2">
+                            <div class="grid-cell u-33">
+                                <i class="iconfont icon-shebao"></i>
+                            </div>
+                            <div class="grid-cell u-66">
+                                <div id="p2" data-options="fit:true,border:false">
+                                    <h2>社保缴纳(亿)</h2>
+                                    <p>172.37</p>
+                                </div>
+                            </div>
                         </div>
                         <div class="grid-cell p-10"></div>
-                        <div class="grid-cell">
-                            <div id="p3" data-options="fit:true"></div>
+                        <div class="grid-cell bd1 flex-row abc color4">
+                            <div class="grid-cell u-33">
+                                <i class="iconfont icon-shebaogongjijin"></i>
+                            </div>
+                            <div class="grid-cell u-66">
+                                <div id="p3" data-options="fit:true,border:false ">
+                                    <h2>公积金实缴(亿)</h2>
+                                    <p>116.73</p>
+                                </div>
+                            </div>
                         </div>
                         <div class="grid-cell p-10"></div>
-                        <div class="grid-cell">
-                            <div id="p4" data-options="fit:true"></div>
+                        <div class="grid-cell bd1 flex-row abc color1">
+                            <div class="grid-cell u-33">
+                                <i class="iconfont icon-zhisun"></i>
+                            </div>
+                            <div class="grid-cell u-66">
+                                <div id="p4" data-options="fit:true,border:false ">
+                                    <h2>亏损企业(家)</h2>
+                                    <p>1586</p>
+                                </div>
+                            </div>
                         </div>
                         <div class="grid-cell p-10"></div>
-                        <div class="grid-cell">
-                            <div id="p5" data-options="fit:true"></div>
+                        <div class="grid-cell bd1 flex-row abc color5">
+                            <div class="grid-cell u-33">
+                                <i class="iconfont icon-touzi"></i>
+                            </div>
+                            <div class="grid-cell u-66">
+                                <div id="p5" data-options="fit:true,border:false ">
+                                    <h2>房地产投资(亿)</h2>
+                                    <p>1289</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="grid-cell p-10"></div>
-                <div class="grid-cell flex-col" style="height:100%">
+                <div class="grid-cell flex-col" style="height:100% ">
                     <div class="grid-cell flex-row">
                         <div class="grid-cell flex-col bd1">
                             <div class="grid-cell u-60">
                                 <div id="p6" data-options="fit:true,border:false">
-                                    <div id="p6_chart" style="width: 100%;height:100%;"></div>
+                                    <div id="p6_chart" style="width: 100%;height:100%; "></div>
                                 </div>
                             </div>
-                            <div class="grid-cell">
+                            <div class="grid-cell gy">
                                 <p>
+                                    工业增加值：是工业企业全部生产活动的总成果扣除了在生产过程中消耗或转移的物质产品和劳务价值后的余额； 是工业企业生产过程中新增加的价值。增加值是国民经济核算的一项基础指标。
                                 </p>
                             </div>
                         </div>
                         <div class="grid-cell p-10"></div>
                         <div class="grid-cell flex-col">
-                            <div class="grid-cell">
-                                <div id="p7" data-options="fit:true">
-                                    <div id="p7_chart" style="width: 100%;height:100%;"></div>
+                            <div class="grid-cell bd1">
+                                <div id="p7" data-options="fit:true,border:false">
+                                    <div id="p7_chart" style="width: 100%;height:100%; "></div>
                                 </div>
                             </div>
                             <div class="grid-cell p-10"></div>
-                            <div class="grid-cell">
-                                <div id="p8" data-options="fit:true">
-                                    <div id="p8_chart" style="width: 100%;height:100%;"></div>
+                            <div class="grid-cell bd1">
+                                <div id="p8" data-options="fit:true,border:false">
+                                    <div id="p8_chart" style="width: 100%;height:100%; "></div>
                                 </div>
                             </div>
                         </div>
                         <div class="grid-cell p-10"></div>
                         <div class="grid-cell flex-col">
-                            <div class="grid-cell">
-                                <div id="p9" data-options="fit:true">
-                                    <div id="p9_chart" style="width: 100%;height:100%;"></div>
+                            <div class="grid-cell bd1">
+                                <div id="p9" data-options="fit:true,border:false">
+                                    <div id="p9_chart" style="width: 100%;height:100%; "></div>
                                 </div>
                             </div>
                             <div class="grid-cell p-10"></div>
-                            <div class="grid-cell">
-                                <div id="p10" data-options="fit:true">
-                                    <div id="p10_chart" style="width: 100%;height:100%;"></div>
+                            <div class="grid-cell bd1">
+                                <div id="p10" data-options="fit:true,border:false">
+                                    <div id="p10_chart" style="width: 100%;height:100%; "></div>
                                 </div>
                             </div>
                         </div>
@@ -119,12 +152,43 @@
                     <div class="grid-cell p-10"></div>
 
                     <div class="grid-cell flex-col bd1">
-                        <div class="grid-cell u-25 flex-row">
-
+                        <div class="grid-cell u-25 flex-row p11-icon-wrapper">
+                            <div class="grid-cell current color1">
+                                <i class="iconfont icon-gongye"></i>
+                                <p>工业</p>
+                            </div>
+                            <div class="grid-cell color2">
+                                <i class="iconfont icon-gongchengjianzhu"></i>
+                                <p>建筑</p>
+                            </div>
+                            <div class="grid-cell color3">
+                                <i class="iconfont icon-jiaotong"></i>
+                                <p>交通运输</p>
+                            </div>
+                            <div class="grid-cell color5">
+                                <i class="iconfont icon-zhusu"></i>
+                                <p>住宿</p>
+                            </div>
+                            <div class="grid-cell color4">
+                                <i class="iconfont icon-4"></i>
+                                <p>餐饮</p>
+                            </div>
+                            <div class="grid-cell color2">
+                                <i class="iconfont icon-xinxijishu"></i>
+                                <p>信息技术</p>
+                            </div>
+                            <div class="grid-cell color1">
+                                <i class="iconfont icon-fangdichan"></i>
+                                <p>房地产</p>
+                            </div>
+                            <div class="grid-cell color3">
+                                <i class="iconfont icon-muchang"></i>
+                                <p>农林牧渔</p>
+                            </div>
                         </div>
                         <div class="grid-cell">
                             <div id="p11" data-options="fit:true, border:false">
-                                <div id="p11_chart" style="width: 100%;height:100%;"></div>
+                                <div id="p11_chart" style="width: 100%;height:100%; "></div>
                             </div>
                         </div>
 
@@ -132,14 +196,14 @@
                 </div>
                 <div class="grid-cell p-10"></div>
                 <div class="grid-cell flex-col" style="height:100%">
-                    <div class="grid-cell">
-                        <div id="p12" data-options="fit:true">
+                    <div class="grid-cell bd1">
+                        <div id="p12" data-options="fit:true,border:false">
                             <div id="p12_chart" style="width: 100%;height:100%;"></div>
                         </div>
                     </div>
                     <div class="grid-cell p-10"></div>
-                    <div class="grid-cell">
-                        <div id="p13" data-options="fit:true">
+                    <div class="grid-cell bd1">
+                        <div id="p13" data-options="fit:true,border:false">
                             <div id="p13_chart" style="width: 100%;height:100%;"></div>
                         </div>
                     </div>
@@ -148,22 +212,21 @@
         </div>
     </div>
     <!--easyui相关-->
-    <script type="text/javascript" src="../js/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/jquery.easyui.min.js"></script>
-    <script type="text/javascript" src="../themes/insdep/jquery.insdep-extend.min.js"></script>
+    <script type="text/javascript " src="../js/jquery.min.js "></script>
+    <script type="text/javascript " src="../js/jquery.easyui.min.js "></script>
+    <script type="text/javascript " src="../themes/insdep/jquery.insdep-extend.min.js "></script>
     <!--easyui相关结束-->
     <!--第三方插件加载-->
-    <script type="text/javascript" src="../js/plugins/echarts.min.js"></script>
-    <script type="text/javascript" src="../js/jquery.portal.js"></script>
+    <script type="text/javascript " src="../js/plugins/echarts.min.js "></script>
+    <script type="text/javascript " src="../js/jquery.portal.js "></script>
     <!--第三方插件加载结束-->
     <!--自定义js-->
-    <script type="text/javascript" src="../js/common.js"></script>
-    <script type="text/javascript" src="../js/lib.js"></script>
-    <script type="text/javascript" src="../js/sjzs.js"></script>
+    <script type="text/javascript " src="../js/common.js "></script>
+    <script type="text/javascript " src="../js/lib.js "></script>
+    <script type="text/javascript " src="../js/sjzs.js "></script>
     <!--自定义js结束-->
     <script>
         $(function() {
-            window.setInterval("realSysTime(clock)", 1000); //实时获取并显示系统时间 
             /*布局部分*/
             $('#master-layout').layout({
                 fit: true /*布局框架全屏*/
@@ -268,7 +331,8 @@
                     bottom: 5,
                     textStyle: {
                         fontSize: 16,
-                        fontWeight: 'bolder'
+                        fontWeight: 'bolder',
+                        color: '#16a1c2'
                     }
                 },
                 tooltip: {
@@ -301,7 +365,10 @@
                     detail: {
                         textStyle: { // 其余属性默认使用全局文本样式，详见TEXTSTYLE
                             fontWeight: 'normal',
-                            fontSize: 14
+                            fontSize: 14,
+                            textStyle: {
+                                color: '#16a1c2'
+                            }
                         }
                     },
                     data: [{
@@ -310,7 +377,6 @@
                     }]
                 }]
             };
-
             Chart.initChart('p6_chart', option);
             Chart.initChart('p7_chart');
             Chart.initChart('p8_chart');

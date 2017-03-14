@@ -1,0 +1,74 @@
+<div style="width:100%;height:100%">
+    <table id="dg" data-options="singleSelect:true,pagination:true,
+                fitColumns:true,toolbar:'#tb-wjgl',collapsible:true,url:'../data/datagrid_data1.json',method:'get'" style="height:100%;width:100%;">
+        <thead>
+            <tr>
+                <th data-options="field:'ck',checkbox:true"></th>
+                <th data-options="field:'itemid',width:80">文件名称</th>
+                <th data-options="field:'productid',width:100">创建人</th>
+                <th data-options="field:'listprice',width:80,align:'right'">创建时间</th>
+                <th data-options="field:'unitcost',width:80,align:'right'">备注</th>
+                <th data-options="field:'do',width:200,align:'center',formatter:_initButton">操作</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+<div id="tb-wjgl">
+
+    <a href="#" class="easyui-linkbutton dg-add iconfont button-inverse" iconCls="icon-cloud-upload">上传</a>
+    <a href="#" class="easyui-linkbutton dg-add iconfont button-inverse" iconCls="icon-cloud-download">操作手册下载</a>
+</div>
+
+<form id="wd-wjgl" class="easyui-window" title="上传附件" data-options="modal:true,closed:true,iconCls:'icon-save'" style=" width:400px;height:350px;">
+    <div class="easyui-layout" data-options="fit:true">
+        <div data-options="region:'center'" style="padding:10px;">
+            <!--<form id="form">-->
+            <div style="margin-bottom:20px">
+                <label class="label-top" style="width:100%; display:block;">选择文件:</label>
+                <input class="easyui-filebox iconfont" style="width:100%" data-options="buttonIcon:'icon-folder-search',buttonText:''">
+            </div>
+            <div style="margin-bottom:20px">
+                <label class="label-top" style="width:100%; display:block;">报送单位:</label>
+                <input class="easyui-combobox" name="language" style="width:100%;" data-options="
+                    url:'data/combobox_data1.json',
+                    method:'get',
+                    valueField:'id',
+                    textField:'text',
+                    panelHeight:'auto',
+                    iconWidth:22,
+                    multiple:true
+                    ">
+            </div>
+            <div style="margin-bottom:20px">
+                <label class="label-top">文件说明:</label>
+                <input class="easyui-textbox" style="width:100%; height:60px;" data-options="multiline:true">
+            </div>
+            <!--</form>-->
+        </div>
+        <div data-options="region:'south',border:false" style="text-align:right;padding:5px;">
+            <a class="easyui-linkbutton iconfont button-success" data-options="iconCls:'icon-content-save'" href="javascript:void(0)" type="submit" style="width:80px">保存</a>
+            <a class="easyui-linkbutton iconfont button-danger" data-options="iconCls:'icon-close'" href="javascript:void(0)" onclick="javascript:alert('cancel')" style="width:80px">取消</a>
+        </div>
+    </div>
+</form>
+
+<script>
+    $(function() {
+        var toolbar = $('#tb-wjgl');
+        var addbtn = $('#tb-wjgl .dg-add');
+
+        $('#dg').datagrid({
+            onLoadSuccess: function() {
+                var target = this;
+                $('.easyui-linkbutton').each(function() {
+                    $(this).linkbutton();
+                });
+            }
+        });
+
+        addbtn.click(function() {
+            Common.onAdd($('#wd-wjgl'));
+        });
+    });
+</script>
